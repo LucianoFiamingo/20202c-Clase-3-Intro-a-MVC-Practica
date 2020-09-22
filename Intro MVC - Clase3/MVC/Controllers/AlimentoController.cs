@@ -19,7 +19,8 @@ namespace MVC.Controllers
         public ActionResult CrearConRequest()
         {
             Alimento alimento = new Alimento();
-            alimento.Descripcion = Request["Descripcion"];
+            alimento.Nombre = Request["Nombre"];
+            alimento.Peso = Request["Peso"];
 
             AlimentoServicio.Crear(alimento);
 
@@ -31,7 +32,8 @@ namespace MVC.Controllers
         public ActionResult CrearConFormCollection(FormCollection form)
         {
             Alimento alimento = new Alimento();
-            alimento.Descripcion = form["Descripcion"];
+            alimento.Nombre = form["Nombre"];
+            alimento.Peso = form["Peso"];
 
             AlimentoServicio.Crear(alimento);
 

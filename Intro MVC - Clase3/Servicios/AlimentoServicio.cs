@@ -56,7 +56,8 @@ namespace Servicios
             public void Modificar(Alimento alimento)
             {
                 Alimento alimentoActual = ObtenerPorId(alimento.Id);
-            alimentoActual.Descripcion = alimento.Descripcion;
+            alimentoActual.Nombre = alimento.Nombre;
+            alimentoActual.Peso = alimento.Peso;
             }
     }
 }

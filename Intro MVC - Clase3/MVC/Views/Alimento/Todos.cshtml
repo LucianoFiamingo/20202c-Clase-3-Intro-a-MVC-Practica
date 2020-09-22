@@ -1,0 +1,36 @@
+﻿@model List<Entidades.Alimento>
+
+<div>
+    <div>
+        <a href="/Alimento/Crear">Crear</a>
+    </div>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Peso</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+
+        @foreach (Entidades.Alimento alimento in Model)
+        {
+            <tr>
+                <td>
+                    @alimento.Nombre
+                </td>
+
+                <td>
+                    @alimento.Peso
+                </td>
+                <td>
+                    <a href="/Empleado/Modificar/@alimento.Id">Modificar</a>
+                </td>
+                <td>
+                    <a href="/Empleado/Eliminar/@alimento.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
